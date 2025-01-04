@@ -14,4 +14,7 @@ read_model
 flatten_hierarchy
 encode_variables
 build_boolean_model
-check_ltlspec_klive
+build_model -f -m Threshold
+
+# Check Model
+check_ltlspec_ic3 -K 1 #Verifies LTL properties using ic3 engines, either with K-Livesness or with (abstract) liveness-to-safety transformation
